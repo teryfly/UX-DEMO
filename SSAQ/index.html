@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>手术安全核查制度闭环管理系统 · 仿真演示</title>
+  <link rel="stylesheet" href="vendor/reset.css" />
+  <link rel="stylesheet" href="src/app.css" />
+</head>
+<body>
+  <div id="root">
+    <div id="boot">正在加载手术安全核查制度闭环管理系统…</div>
+  </div>
+
+  <!-- 依赖（本地打包，离线可用） -->
+  <script src="vendor/react.production.min.js"></script>
+  <script src="vendor/react-dom.production.min.js"></script>
+  <script src="vendor/dayjs.min.js"></script>
+  <script src="vendor/antd.min.js"></script>
+  <script src="vendor/icons.min.js"></script>
+
+  <!-- FHIR 仿真数据层（纯 JS，先于 Babel 执行） -->
+  <script src="src/store.js"></script>
+
+  <!-- Babel 运行时 + 业务页面（JSX） -->
+  <script src="vendor/babel.min.js"></script>
+  <script type="text/babel" data-presets="react" src="src/ui-common.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/pages-home.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/pages-config.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/pages-checklist.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/pages-monitor.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/pages-analysis.jsx"></script>
+  <script type="text/babel" data-presets="react" src="src/main.jsx"></script>
+</body>
+</html>

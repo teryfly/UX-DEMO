@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>病历管理制度闭环管理系统 · 演示原型</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- 数据与业务层 -->
+  <script src="js/data.js"></script>
+  <script src="js/business.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/emr.js"></script>
+  <script src="js/app.js"></script>
+  <!-- 页面共享 -->
+  <script src="js/pages/shared.js"></script>
+  <!-- 各页面 -->
+  <script src="js/pages/home.js"></script>
+  <script src="js/pages/time-monitor.js"></script>
+  <script src="js/pages/rectify.js"></script>
+  <script src="js/pages/rectify-track.js"></script>
+  <script src="js/pages/archive.js"></script>
+  <script src="js/pages/quality.js"></script>
+  <script src="js/pages/timeliness.js"></script>
+  <script src="js/pages/time-config.js"></script>
+  <script src="js/pages/qc-config.js"></script>
+  <script src="js/pages/perm.js"></script>
+
+  <script>App.init();</script>
+</body>
+</html>

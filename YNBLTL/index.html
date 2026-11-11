@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>疑难病例讨论制度闭环管理系统 · 演示原型</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- ===================== 顶部导航栏 (A) ===================== -->
+  <header class="topbar" id="topbar">
+    <div class="topbar-left">
+      <span class="brand">🏥 疑难病例讨论管理</span>
+      <nav class="mainnav" id="mainnav"><!-- 主导航按角色动态渲染 --></nav>
+    </div>
+    <div class="topbar-right">
+      <!-- 角色切换器：演示时通过它切换登录角色，体验完整业务流程 -->
+      <div class="role-switcher" id="roleSwitcher" title="切换演示角色">
+        <span class="role-switcher-label">演示角色</span>
+        <select id="roleSelect"></select>
+      </div>
+      <button class="icon-btn" id="msgBtn" title="消息通知">
+        🔔<span class="badge" id="msgBadge">0</span>
+      </button>
+      <div class="user-chip" id="userChip">
+        <span class="avatar" id="userAvatar">👤</span>
+        <span class="user-meta">
+          <span class="user-name" id="userName">—</span>
+          <span class="user-role" id="userRole">—</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== 面包屑 (B) ===================== -->
+  <div class="breadcrumb-bar" id="breadcrumbBar" style="display:none">
+    <nav class="breadcrumb" id="breadcrumb"></nav>
+  </div>
+
+  <!-- ===================== 主内容容器 ===================== -->
+  <main class="page-root" id="pageRoot"></main>
+
+  <!-- ===================== 底部信息栏 (E) ===================== -->
+  <footer class="footer">
+    <span>© 2026 疑难病例讨论制度闭环管理系统 · 演示原型（数据基于 FHIR 标准在浏览器本地模拟）</span>
+    <span class="footer-links">
+      <a href="#" id="helpLink">帮助</a>
+      <a href="#" id="privacyLink">隐私政策</a>
+      <a href="#" id="resetLink" title="清空本地缓存并重新生成演示数据">重置演示数据</a>
+    </span>
+  </footer>
+
+  <!-- ===================== 全局容器 ===================== -->
+  <div id="modalLayer"></div>
+  <div id="toastLayer"></div>
+  <div id="drawerLayer"></div>
+
+  <!-- ===================== 脚本（按依赖顺序加载，无需构建工具） ===================== -->
+  <script src="js/util.js"></script>
+  <script src="js/fhir.js"></script>
+  <script src="js/seed.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/domain.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/pages/workbench.js"></script>
+  <script src="js/pages/discussion.js"></script>
+  <script src="js/pages/meeting-create.js"></script>
+  <script src="js/pages/research-record.js"></script>
+  <script src="js/pages/tracking.js"></script>
+  <script src="js/pages/reports.js"></script>
+  <script src="js/pages/admin.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

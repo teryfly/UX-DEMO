@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>值班交接班制度闭环管理系统</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <header id="topbar" class="topbar"></header>
+
+  <!-- 主体：侧栏 + 内容 -->
+  <div class="layout">
+    <aside id="sidebar" class="sidebar"></aside>
+    <main class="main">
+      <div id="breadcrumb" class="breadcrumb"></div>
+      <div id="view" class="view"></div>
+      <footer class="footer">
+        <span>© 值班交接班制度闭环管理系统 · 演示原型（数据基于 FHIR 标准）</span>
+        <span><a href="#">帮助</a> · <a href="#">隐私政策</a></span>
+      </footer>
+    </main>
+  </div>
+
+  <!-- FHIR 请求控制台（可折叠） -->
+  <div id="fhir-console" class="fhir-console collapsed">
+    <div class="fc-head" onclick="App.toggleConsole()">
+      <span>⚡ FHIR 控制台</span>
+      <span class="fc-count" id="fc-count">0</span>
+      <span class="fc-toggle">▲</span>
+    </div>
+    <div class="fc-body" id="fc-body"></div>
+  </div>
+
+  <!-- 全局容器：弹框 / 提示 -->
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toast-root"></div>
+
+  <!-- 按依赖顺序加载（classic scripts，零构建，可直接静态托管） -->
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/fhir.js"></script>
+  <script src="assets/js/seed.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/pages/home.js"></script>
+  <script src="assets/js/pages/rule.js"></script>
+  <script src="assets/js/pages/template.js"></script>
+  <script src="assets/js/pages/roster.js"></script>
+  <script src="assets/js/pages/handover-list.js"></script>
+  <script src="assets/js/pages/handover-record.js"></script>
+  <script src="assets/js/pages/monitor.js"></script>
+  <script src="assets/js/pages/report.js"></script>
+  <script src="assets/js/pages/sysconfig.js"></script>
+  <script src="assets/js/pages/userperm.js"></script>
+  <script src="assets/js/router.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
